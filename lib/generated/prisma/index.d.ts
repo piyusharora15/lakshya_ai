@@ -1360,7 +1360,7 @@ export namespace Prisma {
     email: string | null
     name: string | null
     imageUrl: string | null
-    industry: string | null
+    industryId: string | null
     createdAt: Date | null
     updatedAt: Date | null
     bio: string | null
@@ -1373,7 +1373,7 @@ export namespace Prisma {
     email: string | null
     name: string | null
     imageUrl: string | null
-    industry: string | null
+    industryId: string | null
     createdAt: Date | null
     updatedAt: Date | null
     bio: string | null
@@ -1386,7 +1386,7 @@ export namespace Prisma {
     email: number
     name: number
     imageUrl: number
-    industry: number
+    industryId: number
     createdAt: number
     updatedAt: number
     bio: number
@@ -1410,7 +1410,7 @@ export namespace Prisma {
     email?: true
     name?: true
     imageUrl?: true
-    industry?: true
+    industryId?: true
     createdAt?: true
     updatedAt?: true
     bio?: true
@@ -1423,7 +1423,7 @@ export namespace Prisma {
     email?: true
     name?: true
     imageUrl?: true
-    industry?: true
+    industryId?: true
     createdAt?: true
     updatedAt?: true
     bio?: true
@@ -1436,7 +1436,7 @@ export namespace Prisma {
     email?: true
     name?: true
     imageUrl?: true
-    industry?: true
+    industryId?: true
     createdAt?: true
     updatedAt?: true
     bio?: true
@@ -1537,7 +1537,7 @@ export namespace Prisma {
     email: string
     name: string | null
     imageUrl: string | null
-    industry: string | null
+    industryId: string | null
     createdAt: Date
     updatedAt: Date
     bio: string | null
@@ -1570,7 +1570,7 @@ export namespace Prisma {
     email?: boolean
     name?: boolean
     imageUrl?: boolean
-    industry?: boolean
+    industryId?: boolean
     createdAt?: boolean
     updatedAt?: boolean
     bio?: boolean
@@ -1589,7 +1589,7 @@ export namespace Prisma {
     email?: boolean
     name?: boolean
     imageUrl?: boolean
-    industry?: boolean
+    industryId?: boolean
     createdAt?: boolean
     updatedAt?: boolean
     bio?: boolean
@@ -1604,7 +1604,7 @@ export namespace Prisma {
     email?: boolean
     name?: boolean
     imageUrl?: boolean
-    industry?: boolean
+    industryId?: boolean
     createdAt?: boolean
     updatedAt?: boolean
     bio?: boolean
@@ -1619,7 +1619,7 @@ export namespace Prisma {
     email?: boolean
     name?: boolean
     imageUrl?: boolean
-    industry?: boolean
+    industryId?: boolean
     createdAt?: boolean
     updatedAt?: boolean
     bio?: boolean
@@ -1627,7 +1627,7 @@ export namespace Prisma {
     skills?: boolean
   }
 
-  export type UserOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "clerkUserId" | "email" | "name" | "imageUrl" | "industry" | "createdAt" | "updatedAt" | "bio" | "experience" | "skills", ExtArgs["result"]["user"]>
+  export type UserOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "clerkUserId" | "email" | "name" | "imageUrl" | "industryId" | "createdAt" | "updatedAt" | "bio" | "experience" | "skills", ExtArgs["result"]["user"]>
   export type UserInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     industryInsight?: boolean | User$industryInsightArgs<ExtArgs>
     assessments?: boolean | User$assessmentsArgs<ExtArgs>
@@ -1656,7 +1656,7 @@ export namespace Prisma {
       email: string
       name: string | null
       imageUrl: string | null
-      industry: string | null
+      industryId: string | null
       createdAt: Date
       updatedAt: Date
       bio: string | null
@@ -2094,7 +2094,7 @@ export namespace Prisma {
     readonly email: FieldRef<"User", 'String'>
     readonly name: FieldRef<"User", 'String'>
     readonly imageUrl: FieldRef<"User", 'String'>
-    readonly industry: FieldRef<"User", 'String'>
+    readonly industryId: FieldRef<"User", 'String'>
     readonly createdAt: FieldRef<"User", 'DateTime'>
     readonly updatedAt: FieldRef<"User", 'DateTime'>
     readonly bio: FieldRef<"User", 'String'>
@@ -7141,7 +7141,7 @@ export namespace Prisma {
     email: 'email',
     name: 'name',
     imageUrl: 'imageUrl',
-    industry: 'industry',
+    industryId: 'industryId',
     createdAt: 'createdAt',
     updatedAt: 'updatedAt',
     bio: 'bio',
@@ -7350,7 +7350,7 @@ export namespace Prisma {
     email?: StringFilter<"User"> | string
     name?: StringNullableFilter<"User"> | string | null
     imageUrl?: StringNullableFilter<"User"> | string | null
-    industry?: StringNullableFilter<"User"> | string | null
+    industryId?: StringNullableFilter<"User"> | string | null
     createdAt?: DateTimeFilter<"User"> | Date | string
     updatedAt?: DateTimeFilter<"User"> | Date | string
     bio?: StringNullableFilter<"User"> | string | null
@@ -7368,7 +7368,7 @@ export namespace Prisma {
     email?: SortOrder
     name?: SortOrderInput | SortOrder
     imageUrl?: SortOrderInput | SortOrder
-    industry?: SortOrderInput | SortOrder
+    industryId?: SortOrderInput | SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
     bio?: SortOrderInput | SortOrder
@@ -7389,7 +7389,7 @@ export namespace Prisma {
     NOT?: UserWhereInput | UserWhereInput[]
     name?: StringNullableFilter<"User"> | string | null
     imageUrl?: StringNullableFilter<"User"> | string | null
-    industry?: StringNullableFilter<"User"> | string | null
+    industryId?: StringNullableFilter<"User"> | string | null
     createdAt?: DateTimeFilter<"User"> | Date | string
     updatedAt?: DateTimeFilter<"User"> | Date | string
     bio?: StringNullableFilter<"User"> | string | null
@@ -7407,7 +7407,7 @@ export namespace Prisma {
     email?: SortOrder
     name?: SortOrderInput | SortOrder
     imageUrl?: SortOrderInput | SortOrder
-    industry?: SortOrderInput | SortOrder
+    industryId?: SortOrderInput | SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
     bio?: SortOrderInput | SortOrder
@@ -7429,7 +7429,7 @@ export namespace Prisma {
     email?: StringWithAggregatesFilter<"User"> | string
     name?: StringNullableWithAggregatesFilter<"User"> | string | null
     imageUrl?: StringNullableWithAggregatesFilter<"User"> | string | null
-    industry?: StringNullableWithAggregatesFilter<"User"> | string | null
+    industryId?: StringNullableWithAggregatesFilter<"User"> | string | null
     createdAt?: DateTimeWithAggregatesFilter<"User"> | Date | string
     updatedAt?: DateTimeWithAggregatesFilter<"User"> | Date | string
     bio?: StringNullableWithAggregatesFilter<"User"> | string | null
@@ -7761,7 +7761,7 @@ export namespace Prisma {
     email: string
     name?: string | null
     imageUrl?: string | null
-    industry?: string | null
+    industryId?: string | null
     createdAt?: Date | string
     updatedAt?: Date | string
     bio?: string | null
@@ -7795,7 +7795,7 @@ export namespace Prisma {
     email?: StringFieldUpdateOperationsInput | string
     name?: NullableStringFieldUpdateOperationsInput | string | null
     imageUrl?: NullableStringFieldUpdateOperationsInput | string | null
-    industry?: NullableStringFieldUpdateOperationsInput | string | null
+    industryId?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     bio?: NullableStringFieldUpdateOperationsInput | string | null
@@ -7812,7 +7812,7 @@ export namespace Prisma {
     email: string
     name?: string | null
     imageUrl?: string | null
-    industry?: string | null
+    industryId?: string | null
     createdAt?: Date | string
     updatedAt?: Date | string
     bio?: string | null
@@ -7839,7 +7839,7 @@ export namespace Prisma {
     email?: StringFieldUpdateOperationsInput | string
     name?: NullableStringFieldUpdateOperationsInput | string | null
     imageUrl?: NullableStringFieldUpdateOperationsInput | string | null
-    industry?: NullableStringFieldUpdateOperationsInput | string | null
+    industryId?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     bio?: NullableStringFieldUpdateOperationsInput | string | null
@@ -8278,7 +8278,7 @@ export namespace Prisma {
     email?: SortOrder
     name?: SortOrder
     imageUrl?: SortOrder
-    industry?: SortOrder
+    industryId?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
     bio?: SortOrder
@@ -8296,7 +8296,7 @@ export namespace Prisma {
     email?: SortOrder
     name?: SortOrder
     imageUrl?: SortOrder
-    industry?: SortOrder
+    industryId?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
     bio?: SortOrder
@@ -8309,7 +8309,7 @@ export namespace Prisma {
     email?: SortOrder
     name?: SortOrder
     imageUrl?: SortOrder
-    industry?: SortOrder
+    industryId?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
     bio?: SortOrder
@@ -9454,7 +9454,7 @@ export namespace Prisma {
     email: string
     name?: string | null
     imageUrl?: string | null
-    industry?: string | null
+    industryId?: string | null
     createdAt?: Date | string
     updatedAt?: Date | string
     bio?: string | null
@@ -9502,7 +9502,7 @@ export namespace Prisma {
     email?: StringFieldUpdateOperationsInput | string
     name?: NullableStringFieldUpdateOperationsInput | string | null
     imageUrl?: NullableStringFieldUpdateOperationsInput | string | null
-    industry?: NullableStringFieldUpdateOperationsInput | string | null
+    industryId?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     bio?: NullableStringFieldUpdateOperationsInput | string | null
@@ -9534,7 +9534,7 @@ export namespace Prisma {
     email: string
     name?: string | null
     imageUrl?: string | null
-    industry?: string | null
+    industryId?: string | null
     createdAt?: Date | string
     updatedAt?: Date | string
     bio?: string | null
@@ -9582,7 +9582,7 @@ export namespace Prisma {
     email?: StringFieldUpdateOperationsInput | string
     name?: NullableStringFieldUpdateOperationsInput | string | null
     imageUrl?: NullableStringFieldUpdateOperationsInput | string | null
-    industry?: NullableStringFieldUpdateOperationsInput | string | null
+    industryId?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     bio?: NullableStringFieldUpdateOperationsInput | string | null
@@ -9614,7 +9614,7 @@ export namespace Prisma {
     email: string
     name?: string | null
     imageUrl?: string | null
-    industry?: string | null
+    industryId?: string | null
     createdAt?: Date | string
     updatedAt?: Date | string
     bio?: string | null
@@ -9662,7 +9662,7 @@ export namespace Prisma {
     email?: StringFieldUpdateOperationsInput | string
     name?: NullableStringFieldUpdateOperationsInput | string | null
     imageUrl?: NullableStringFieldUpdateOperationsInput | string | null
-    industry?: NullableStringFieldUpdateOperationsInput | string | null
+    industryId?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     bio?: NullableStringFieldUpdateOperationsInput | string | null
@@ -9739,7 +9739,7 @@ export namespace Prisma {
     email?: StringFilter<"User"> | string
     name?: StringNullableFilter<"User"> | string | null
     imageUrl?: StringNullableFilter<"User"> | string | null
-    industry?: StringNullableFilter<"User"> | string | null
+    industryId?: StringNullableFilter<"User"> | string | null
     createdAt?: DateTimeFilter<"User"> | Date | string
     updatedAt?: DateTimeFilter<"User"> | Date | string
     bio?: StringNullableFilter<"User"> | string | null
