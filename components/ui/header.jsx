@@ -21,7 +21,10 @@ import { DropdownMenu } from "./dropdown-menu";
 import { DropdownMenuContent } from "./dropdown-menu";
 import { DropdownMenuTrigger } from "./dropdown-menu";
 import { DropdownMenuItem } from "./dropdown-menu";
-const Header = () => {
+import { checkUser } from "@/lib/checkUser";
+
+const Header = async () => {
+  await checkUser();
   return (
     <header className="fixed top-0 w-full border-b bg-background/80 backdrop-blur-md z-50 supports-[backdrop-filter]:bg-background/60">
       <nav className="container mx-auto px-4 h-16 flex items-center justify-between">
@@ -44,14 +47,16 @@ const Header = () => {
                 <span className="hidden md:block">Industry Insights</span>
               </Button>
             </Link>
+
             <DropdownMenu>
               <DropdownMenuTrigger>
-                <Button>
+                <Button variant="outline">
                   <StarsIcon className="h-4 w-4" />
                   <span className="hidden md:block">Growth Tools</span>
                   <ChevronDown className="h-4 w-4" />
                 </Button>
               </DropdownMenuTrigger>
+
               <DropdownMenuContent>
                 <DropdownMenuItem>
                   <Link href={"/resume"} className="flex items-center gap-2">
@@ -77,11 +82,13 @@ const Header = () => {
               </DropdownMenuContent>
             </DropdownMenu>
           </SignedIn>
+
           <SignedOut>
             <SignInButton>
               <Button variant="outline">Sign In</Button>
             </SignInButton>
           </SignedOut>
+
           <SignedIn>
             <UserButton
               appearance={{
