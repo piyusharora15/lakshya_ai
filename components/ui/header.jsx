@@ -25,13 +25,14 @@ const Header = () => {
   return (
     <header className="fixed top-0 w-full border-b bg-background/80 backdrop-blur-md z-50 supports-[backdrop-filter]:bg-background/60">
       <nav className="container mx-auto px-4 h-16 flex items-center justify-between">
-        <Link href="/">
+        <Link href="/" className="flex items-center">
           <Image
             src="/LakshyaAI.png"
             alt="LakshyaAI Logo"
-            width={200}
-            height={60}
-            className="h-12 py-1 w-auto object-contain"
+            width={160}
+            height={48}
+            className="h-12 w-auto object-contain"
+            priority
           />
         </Link>
 
@@ -82,15 +83,15 @@ const Header = () => {
             </SignInButton>
           </SignedOut>
           <SignedIn>
-            <UserButton 
-            appearance={{
-                elements:{
-                    avatarBox:"w-10 h-10",
-                    userButtonPopoverCard:"shadow-xl",
-                    userPreviewMainIdentifier: "font-semibold"
-                }
-                }}
-                afterSignOutUrl="/"
+            <UserButton
+              appearance={{
+                elements: {
+                  avatarBox: "w-10 h-10",
+                  userButtonPopoverCard: "shadow-xl",
+                  userPreviewMainIdentifier: "font-semibold",
+                },
+              }}
+              afterSignOutUrl="/"
             />
           </SignedIn>
         </div>
