@@ -17,14 +17,14 @@ import {
   PenBox,
   StarsIcon,
 } from "lucide-react";
-import { DropdownMenu } from "./dropdown-menu";
-import { DropdownMenuContent } from "./dropdown-menu";
-import { DropdownMenuTrigger } from "./dropdown-menu";
-import { DropdownMenuItem } from "./dropdown-menu";
-import { checkUser } from "@/lib/checkUser";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuTrigger,
+  DropdownMenuItem,
+} from "./dropdown-menu";
 
-const Header = async () => {
-  await checkUser();
+const Header = () => {
   return (
     <header className="fixed top-0 w-full border-b bg-background/80 backdrop-blur-md z-50 supports-[backdrop-filter]:bg-background/60">
       <nav className="container mx-auto px-4 h-16 flex items-center justify-between">
@@ -41,15 +41,15 @@ const Header = async () => {
 
         <div className="flex items-center space-x-2 md:space-x-4">
           <SignedIn>
-            <Link href={"/dashboard"}>
-              <Button variant="outline">
+            <Button asChild variant="outline">
+              <Link href="/dashboard">
                 <LayoutDashboard className="h-4 w-4" />
                 <span className="hidden md:block">Industry Insights</span>
-              </Button>
-            </Link>
+              </Link>
+            </Button>
 
             <DropdownMenu>
-              <DropdownMenuTrigger>
+              <DropdownMenuTrigger asChild>
                 <Button variant="outline">
                   <StarsIcon className="h-4 w-4" />
                   <span className="hidden md:block">Growth Tools</span>
@@ -57,24 +57,21 @@ const Header = async () => {
                 </Button>
               </DropdownMenuTrigger>
 
-              <DropdownMenuContent>
-                <DropdownMenuItem>
-                  <Link href={"/resume"} className="flex items-center gap-2">
+              <DropdownMenuContent align="end">
+                <DropdownMenuItem asChild>
+                  <Link href="/resume" className="flex items-center gap-2 w-full">
                     <FileText className="h-4 w-4" />
                     <span>Build Resume</span>
                   </Link>
                 </DropdownMenuItem>
-                <DropdownMenuItem>
-                  <Link
-                    href={"/ai-cover-letter"}
-                    className="flex items-center gap-2"
-                  >
+                <DropdownMenuItem asChild>
+                  <Link href="/ai-cover-letter" className="flex items-center gap-2 w-full">
                     <PenBox className="h-4 w-4" />
                     <span>Cover Letter</span>
                   </Link>
                 </DropdownMenuItem>
-                <DropdownMenuItem>
-                  <Link href={"/interview"} className="flex items-center gap-2">
+                <DropdownMenuItem asChild>
+                  <Link href="/interview" className="flex items-center gap-2 w-full">
                     <GraduationCap className="h-4 w-4" />
                     <span>Interview Prep</span>
                   </Link>
@@ -84,8 +81,10 @@ const Header = async () => {
           </SignedIn>
 
           <SignedOut>
-            <SignInButton>
-              <Button variant="outline">Sign In</Button>
+            <SignInButton mode="modal">
+              <Button asChild variant="outline">
+                <span>Sign In</span>
+              </Button>
             </SignInButton>
           </SignedOut>
 
